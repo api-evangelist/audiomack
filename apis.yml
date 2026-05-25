@@ -1,0 +1,165 @@
+aid: audiomack
+name: Audiomack
+description: >-
+  Audiomack is an on-demand music streaming and audio discovery platform that
+  lets artists and creators upload unlimited music and podcasts and reach
+  listeners through its iOS, Android, and web apps. The service is widely
+  associated with hip-hop, rap, R&B, Afrobeats, dancehall, reggae, electronic,
+  and Latin genres, and is a launchpad for independent and emerging artists
+  worldwide, with particularly strong adoption across Africa, the Caribbean,
+  and the U.S. Audiomack publishes a public Data API at
+  https://api.audiomack.com/v1 that exposes the catalog (songs, albums,
+  playlists), artist profiles and follower graph, search and autosuggest,
+  charts by genre and timeframe, streaming URL issuance, favorites and
+  reposts, ad and view/play stats reporting, and authenticated user
+  resources. Authentication is OAuth 1.0a (three-legged), with an
+  optional unauthenticated `key` parameter for read-only access on some
+  endpoints. Audiomack also publishes a Creators portal, an Artist Guide,
+  Audiomack Studios, and the AMP monetization program for artist payouts.
+url: https://raw.githubusercontent.com/api-evangelist/audiomack/refs/heads/main/apis.yml
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+type: Index
+position: Provider
+access: 3rd-Party
+tags:
+  - Music
+  - Music Streaming
+  - Audio
+  - Podcasts
+  - Hip-Hop
+  - Rap
+  - Afrobeats
+  - Reggae
+  - Dancehall
+  - R&B
+  - Electronic
+  - Charts
+  - Playlists
+  - Discovery
+  - Creator Economy
+  - Independent Artists
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: audiomack:audiomack-data-api
+    name: Audiomack Data API
+    humanURL: https://www.audiomack.com/data-api/docs
+    baseURL: https://api.audiomack.com/v1
+    tags:
+      - Music
+      - Streaming
+      - Catalog
+      - Artists
+      - Playlists
+      - Charts
+      - Search
+      - OAuth 1.0a
+    properties:
+      - type: Documentation
+        url: https://www.audiomack.com/data-api/docs
+      - type: OpenAPI
+        url: openapi/audiomack-data-api-openapi.yml
+      - type: CodeExamples
+        url: https://github.com/audiomack/audiomack-api-examples
+      - type: Authentication
+        url: https://www.audiomack.com/data-api/docs
+    description: >-
+      The Audiomack Data API provides programmatic access to Audiomack's music
+      catalog and social graph: songs, albums, artists, playlists, charts by
+      genre and timeframe (daily/weekly/monthly/yearly/total), full-text search
+      and autosuggest, streaming URL issuance (short-lived, ~10 second TTL),
+      favorites, reposts, follows, ad and view/play stats reporting, and the
+      authenticated user's feed, uploads, playlists, favorites, and
+      notifications. Requests are signed with OAuth 1.0a; access tokens are
+      valid for one year. List endpoints support page-based pagination, the
+      `fields` parameter for sparse fieldsets, and a configurable `limit`.
+common:
+  - type: Website
+    url: https://audiomack.com
+  - type: Portal
+    url: https://creators.audiomack.com
+    name: Audiomack for Creators
+  - type: Documentation
+    url: https://www.audiomack.com/data-api/docs
+    name: Audiomack Data API Docs
+  - type: GettingStarted
+    url: https://www.audiomack.com/data-api/docs
+  - type: CodeExamples
+    url: https://github.com/audiomack/audiomack-api-examples
+    name: Audiomack API Examples (PHP)
+  - type: GitHubOrganization
+    url: https://github.com/audiomack
+  - type: Support
+    url: https://audiomack.zendesk.com/
+    name: Audiomack Help Center
+  - type: Contact
+    url: https://creators.audiomack.com/contact-us
+  - type: Documentation
+    url: https://creators.audiomack.com/about/legal
+    name: Legal and DMCA
+  - type: TermsOfService
+    url: https://audiomack.com/about/terms-of-service
+  - type: PrivacyPolicy
+    url: https://audiomack.com/about/privacy-policy
+  - type: ResponsibleDisclosure
+    url: https://creators.audiomack.com/responsible-disclosure
+  - type: Documentation
+    url: https://guide.audiomack.com
+    name: Audiomack Artist Guide
+  - type: Documentation
+    url: https://styleguide.audiomack.com
+    name: Audiomack Style Guide
+  - type: Product
+    url: https://audiomack.studio
+    name: Audiomack Studios
+  - type: SignUp
+    url: https://audiomack.com/login
+  - type: Twitter
+    url: https://twitter.com/audiomack
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/audiomack
+  - type: Facebook
+    url: https://www.facebook.com/audiomack
+  - type: Instagram
+    url: https://www.instagram.com/audiomack
+  - type: YouTube
+    url: https://www.youtube.com/audiomack
+  - type: TikTok
+    url: https://www.tiktok.com/@audiomack
+  - type: Twitch
+    url: https://www.twitch.tv/audiomack
+  - type: Apps
+    url: https://apps.apple.com/us/app/audiomack-music-downloader/id669528610
+    name: Audiomack on iOS
+  - type: Apps
+    url: https://play.google.com/store/apps/details?id=com.audiomack
+    name: Audiomack on Android
+  - type: Features
+    data:
+      - On-demand music and podcast streaming on iOS, Android, and web
+      - Unlimited free uploads for artists and creators with no premium creator account
+      - Public Data API at https://api.audiomack.com/v1 with OAuth 1.0a authentication
+      - Catalog endpoints for songs, albums, artists, and playlists
+      - Charts by genre and timeframe (daily, weekly, monthly, yearly, total)
+      - Full-text search and autosuggest across music, albums, and artists
+      - Short-lived streaming URL issuance (~10 second TTL) via /music/{id}/play
+      - Favorites, reposts, follows, pinned items, and activity feeds
+      - View and play stats reporting via tokenised stats events
+      - Authenticated user resources: profile, feed, uploads, playlists, favorites, notifications
+      - AMP (Audiomack Monetization Program) for artist payouts
+      - Artist Dashboard with consumption analytics
+      - Hype Machine distribution compatibility
+      - Strong genre focus on hip-hop, rap, Afrobeats, reggae, dancehall, R&B, electronic, Latin
+      - React Native open-source components published under the audiomack GitHub org
+    sources:
+      - https://audiomack.com
+      - https://creators.audiomack.com
+      - https://www.audiomack.com/data-api/docs
+      - https://github.com/audiomack
+      - https://github.com/audiomack/audiomack-api-examples
+    updated: '2026-05-25'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
