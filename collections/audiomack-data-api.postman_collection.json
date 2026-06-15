@@ -1,0 +1,5940 @@
+{
+  "item": [
+    {
+      "id": "8ab51e9c-9d98-450c-8eba-82ce0ac36be6",
+      "name": "Music",
+      "description": {
+        "content": "Songs, albums, streaming, favorites, reposts, and metrics.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3ea1fb4b-b91b-46d3-9e11-baec93154776",
+          "name": "Get Music By Id",
+          "request": {
+            "name": "Get Music By Id",
+            "description": {
+              "content": "Retrieve song or album metadata by Audiomack music ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "Optional consumer key for unauthenticated read access."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7cd883f6-3d59-4c28-ad8a-f63f274b7b48",
+              "name": "Music object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ea2fcd6e-61e1-4a38-850f-7683f096efe9",
+          "name": "Get Music By Slug",
+          "request": {
+            "name": "Get Music By Slug",
+            "description": {
+              "content": "Retrieve a song or album by artist slug and music slug.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":type",
+                ":artist",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "Optional consumer key for unauthenticated read access."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "type",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ab19170-be0d-4fbe-9401-cf5a63a1b33e",
+              "name": "Music object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":type",
+                    ":artist",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "type",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8fddb6fb-68c0-480a-bc79-6f24040078b3",
+          "name": "Flag Music Unplayable",
+          "request": {
+            "name": "Flag Music Unplayable",
+            "description": {
+              "content": "Report a song or album as unplayable.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":type",
+                ":artist",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "type",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "23cf73cb-a6e7-4c61-92f2-c00df770b9d1",
+              "name": "Status updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":type",
+                    ":artist",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "type",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "805989d1-030e-4366-9d5d-4db421b26c4a",
+          "name": "Get Music Preview",
+          "request": {
+            "name": "Get Music Preview",
+            "description": {
+              "content": "Fetch the preview audio resource for a given music ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                "preview",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e3f26b5d-f0fd-4755-a294-5cdd73c561a7",
+              "name": "Preview metadata.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    "preview",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d7c9922d-bacd-41c8-9ec2-32c40f9771ff",
+          "name": "List Recent Music",
+          "request": {
+            "name": "List Recent Music",
+            "description": {
+              "content": "List most recently uploaded music.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                "recent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "599d2c4e-2f67-43ec-b806-ece3405c65b2",
+              "name": "Music collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    "recent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eb331d8c-8627-4a2a-a416-e66f3fcd02b9",
+          "name": "List Recent Music By Genre",
+          "request": {
+            "name": "List Recent Music By Genre",
+            "description": {
+              "content": "List most recently uploaded music for a specific genre (e.g. `hip-hop-rap`, `afrobeats`).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":genre",
+                "recent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "genre",
+                  "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cbc65616-ac71-462d-8472-144be549e0f7",
+              "name": "Music collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":genre",
+                    "recent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "genre",
+                      "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75cdf700-dbf3-4f5f-b4e6-975fb026777a",
+          "name": "List Trending Music",
+          "request": {
+            "name": "List Trending Music",
+            "description": {
+              "content": "List trending music across all genres.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                "trending"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c780526b-fa5a-4526-82af-04c4407bffee",
+              "name": "Music collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    "trending"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f550a9fd-3442-4601-ac11-281099868448",
+          "name": "List Trending Music By Genre",
+          "request": {
+            "name": "List Trending Music By Genre",
+            "description": {
+              "content": "List trending music for a specific genre.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":genre",
+                "trending"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "genre",
+                  "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "accc1572-4405-4aa4-b9d4-a7f95f6e9bfd",
+              "name": "Music collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":genre",
+                    "trending"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "genre",
+                      "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5eedfd88-a358-449e-b5b5-212013022465",
+          "name": "Get Music Stream Url",
+          "request": {
+            "name": "Get Music Stream Url",
+            "description": {
+              "content": "Request a streaming URL for a music resource. The returned URL is valid for approximately 10 seconds.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "play"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "session",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "album_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "playlist_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hq",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5230eabe-74c9-4478-a54e-0ded3acb07c4",
+              "name": "Stream URL response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "play"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "session",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "album_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "playlist_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hq",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af2ef2a9-ede5-4511-af7c-3f0e54060afb",
+          "name": "Record Music Ad Event",
+          "request": {
+            "name": "Record Music Ad Event",
+            "description": {
+              "content": "Track an advertisement event for a music resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "ads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dfbadb07-2c21-4109-b8e1-806e1e027e4a",
+              "name": "Ad event recorded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "ads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "efce3038-68c1-4537-9869-313527a7994a",
+          "name": "Favorite Music",
+          "request": {
+            "name": "Favorite Music",
+            "description": {},
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "favorite"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "706f54f6-b96d-45dd-8351-6f6b62564ba3",
+              "name": "Favorited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "favorite"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29e2d286-63af-47bd-af16-bb60ffd9c94d",
+          "name": "Unfavorite Music",
+          "request": {
+            "name": "Unfavorite Music",
+            "description": {},
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "favorite"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac4507a6-410c-4282-a500-770e4a9df7dc",
+              "name": "Unfavorited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "favorite"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae48e66d-149f-4168-8cc1-103070f14eca",
+          "name": "Repost Music",
+          "request": {
+            "name": "Repost Music",
+            "description": {},
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "repost"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2b003bc1-7caf-4313-b2b5-79cdb1d2274d",
+              "name": "Reposted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "repost"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "33c9b4ba-07b0-41ce-8efe-8f3e617d0240",
+          "name": "Remove Music Repost",
+          "request": {
+            "name": "Remove Music Repost",
+            "description": {},
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "repost"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d952a353-1c2c-4d28-8307-723bea031223",
+              "name": "Repost removed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "repost"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29f92e2b-7cd4-4467-8a0d-5e218323fffb",
+          "name": "Get Music Metrics",
+          "request": {
+            "name": "Get Music Metrics",
+            "description": {
+              "content": "Retrieve play and engagement metrics for a music resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                ":id",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack music identifier."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "48780885-7443-49c6-86f7-aa1248dfd33c",
+              "name": "Metrics response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    ":id",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack music identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "3e121feb-23ea-48df-be6e-2c993d7b3311",
+      "name": "Artist",
+      "description": {
+        "content": "Artist profiles, uploads, favorites, followers, and pinned items.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "25ab3950-a0b4-4718-b5dc-5ff169fca05f",
+          "name": "Get Artist",
+          "request": {
+            "name": "Get Artist",
+            "description": {
+              "content": "Retrieve artist profile and aggregate statistics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "artist",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0bc00acd-e14b-48f7-8d1c-c18278ca68f8",
+              "name": "Artist object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "948aa2b6-df19-4664-a597-aa74d09c7a8b",
+          "name": "List Artist Uploads",
+          "request": {
+            "name": "List Artist Uploads",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "uploads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1beb157c-cb3e-41ad-87d4-f9881e6c01ca",
+              "name": "Uploads collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "uploads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ee2d4b6-a70a-441d-aec5-913b1622f5d9",
+          "name": "List Artist Favorites",
+          "request": {
+            "name": "List Artist Favorites",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "favorites"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "show",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc166978-da98-4225-accf-a0c5ce69b527",
+              "name": "Favorites collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "favorites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "show",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c81383e0-7625-417b-ac1e-61006d8039ef",
+          "name": "Search Artist Favorites",
+          "request": {
+            "name": "Search Artist Favorites",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "favorites",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be97001d-0fa6-4d71-bc00-326eb95c4df3",
+              "name": "Favorites matching query.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "favorites",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "65456f82-4426-4825-83a2-45a878d62358",
+          "name": "List Artist Playlists",
+          "request": {
+            "name": "List Artist Playlists",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "playlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "genre",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "09cf9db2-24a2-4e15-b65c-eb15f5bc609c",
+              "name": "Playlists collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "playlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "genre",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81659bd0-eaa8-40d9-96c1-6f7a277ed553",
+          "name": "Follow Artist",
+          "request": {
+            "name": "Follow Artist",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "follow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c576f5d-9fa6-4847-93b1-f65d10de1b83",
+              "name": "Followed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "follow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b24e553c-8f8e-434d-a542-ab2ad9c92d57",
+          "name": "Unfollow Artist",
+          "request": {
+            "name": "Unfollow Artist",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "follow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e100cffa-84c3-48c3-8cd2-701706e5f919",
+              "name": "Unfollowed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "follow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a262a1b-4e97-4989-9967-cc0fe159242a",
+          "name": "List Artist Following",
+          "request": {
+            "name": "List Artist Following",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "following"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c6a4ac9-9175-4795-8a03-91db73be4085",
+              "name": "Artists this artist follows.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "following"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f318b24d-46fc-497c-bd98-1a34c6e2f18b",
+          "name": "List Artist Followers",
+          "request": {
+            "name": "List Artist Followers",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "follows"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "173004bd-bf2b-4fa6-97a7-29982961ad6f",
+              "name": "Followers collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "follows"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e182f5d2-8ee7-439e-9337-15d79728cd1d",
+          "name": "Get Artist Feed",
+          "request": {
+            "name": "Get Artist Feed",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90d6f603-e228-4412-8c01-3ef9e3b0c565",
+              "name": "Activity feed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "feed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9be897b2-523f-4acc-99ec-bcc7888f239b",
+          "name": "Get Artist Metrics",
+          "request": {
+            "name": "Get Artist Metrics",
+            "description": {
+              "content": "Retrieve artist-level metrics plus top 10 tracks metrics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "artist",
+                ":id",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "83ec1acd-348f-4cc6-854e-d2b6827741b5",
+              "name": "Metrics response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":id",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30960771-cdc8-48d3-b363-a991184fc917",
+          "name": "Get Artist Pinned",
+          "request": {
+            "name": "Get Artist Pinned",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "pinned"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e0588788-77df-41bd-a9cb-fca4693ef586",
+              "name": "Pinned items.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "pinned"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c72d4cf8-b221-4695-b96d-4edf1f00c372",
+          "name": "Add Artist Pinned",
+          "request": {
+            "name": "Add Artist Pinned",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "pinned"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b975ac8b-be7a-4cd5-b916-01cff2c2b5df",
+              "name": "Pinned items added.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "pinned"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "635ff637-16eb-43ef-94e8-8e2b360cb84b",
+          "name": "Update Artist Pinned",
+          "request": {
+            "name": "Update Artist Pinned",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "pinned"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "898c51d1-ecce-4a95-88fd-ecbc5cb8a410",
+              "name": "Pinned items updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "pinned"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81c52889-62a5-4f44-9faf-7c9511343a8c",
+          "name": "Remove Artist Pinned",
+          "request": {
+            "name": "Remove Artist Pinned",
+            "description": {},
+            "url": {
+              "path": [
+                "artist",
+                ":slug",
+                "pinned"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) Artist slug (e.g. `drake`)."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4a1aeba9-621f-467f-831c-3185d9f02c60",
+              "name": "Pinned items removed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artist",
+                    ":slug",
+                    "pinned"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) Artist slug (e.g. `drake`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "056aac64-bfc5-412c-92f4-7ce8e743f379",
+      "name": "Playlist",
+      "description": {
+        "content": "Playlist creation, editing, favoriting, and discovery.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4f916bc3-70e6-49f7-b80a-5ef918e2aeb5",
+          "name": "List Trending Playlists By Genre",
+          "request": {
+            "name": "List Trending Playlists By Genre",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":genre",
+                "trending"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "genre",
+                  "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "da2ce43d-c399-4861-8fba-8aa072531df9",
+              "name": "Playlist collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":genre",
+                    "trending"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "genre",
+                      "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7c16dd1e-d6b0-499f-8426-04ec84995145",
+          "name": "Create Playlist",
+          "request": {
+            "name": "Create Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "title",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "genre",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "private",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "music_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<binary>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "49bb09d9-6e5a-4676-a5ce-1d7b95e49a1f",
+              "name": "Playlist created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "genre",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "private",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "music_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "<binary>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2129b23b-4a46-4733-a05c-1f92a62400b0",
+          "name": "Get Playlist",
+          "request": {
+            "name": "Get Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ddca39c9-bb90-49ac-98d8-e41a253a1fc6",
+              "name": "Playlist object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cc3f94ef-95f4-4eaa-8da2-d5eace59ce09",
+          "name": "Update Playlist",
+          "request": {
+            "name": "Update Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "genre",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "music_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "private",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<binary>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "462618c6-816e-44a8-a892-eaaf35ee0468",
+              "name": "Playlist updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "genre",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "music_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "private",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "<binary>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7bbd0edd-4258-43af-aa39-cbb2c531ae29",
+          "name": "Delete Playlist",
+          "request": {
+            "name": "Delete Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc77d6a8-317f-4c4e-8515-1291104e5a4c",
+              "name": "Playlist deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5367cab-5498-4dea-82e7-6be052a43f89",
+          "name": "Add Track To Playlist",
+          "request": {
+            "name": "Add Track To Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id",
+                "track"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "music_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c3e3720e-cd69-401e-85d2-470b0c8cb4d2",
+              "name": "Track added.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id",
+                    "track"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "music_id",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57a75433-78ec-423b-bbfd-f9200ada20b5",
+          "name": "Remove Track From Playlist",
+          "request": {
+            "name": "Remove Track From Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id",
+                ":music_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "music_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6bbc9dee-37ab-4e96-a583-9978768fe105",
+              "name": "Track removed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id",
+                    ":music_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "music_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c9d9007d-93a8-467e-ba05-7041b87faa2f",
+          "name": "Get Playlist By Slug",
+          "request": {
+            "name": "Get Playlist By Slug",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":artistSlug",
+                ":playlistSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "artistSlug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "playlistSlug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e728a104-e5b5-4710-b25b-7db14d4292c3",
+              "name": "Playlist object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":artistSlug",
+                    ":playlistSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "artistSlug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "playlistSlug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d21f72a9-dd32-4f92-b84c-9d6163c10d6e",
+          "name": "Favorite Playlist",
+          "request": {
+            "name": "Favorite Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id",
+                "favorite"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4b013869-64e8-40ee-8589-aab31f845f1a",
+              "name": "Favorited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id",
+                    "favorite"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2adc14e9-703d-4b7b-91a5-2828fcecefb2",
+          "name": "Unfavorite Playlist",
+          "request": {
+            "name": "Unfavorite Playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id",
+                "favorite"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "12043e4d-2415-46ee-8fb8-792770a7ce53",
+              "name": "Unfavorited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id",
+                    "favorite"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "64974e51-4e2f-489c-8ba8-5b98fa320f68",
+          "name": "Get Playlist Metrics",
+          "request": {
+            "name": "Get Playlist Metrics",
+            "description": {},
+            "url": {
+              "path": [
+                "playlist",
+                ":id",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Audiomack playlist identifier."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "44ba5309-930e-4cff-bbcf-432fb072030c",
+              "name": "Metrics response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlist",
+                    ":id",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Audiomack playlist identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "fba40d60-a28d-4c96-adb5-88336343f282",
+      "name": "Chart",
+      "description": {
+        "content": "Aggregate song, album, and playlist charts across timeframes and genres.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09bb2983-80be-4a3c-9f21-035fa15520ac",
+          "name": "Get Chart",
+          "request": {
+            "name": "Get Chart",
+            "description": {
+              "content": "Retrieve songs, albums, or playlists chart for a given timeframe (total, daily, weekly, monthly, yearly).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "chart",
+                ":kind",
+                ":type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "kind",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "type",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e58364f0-2c2d-41d2-8179-e7b8e9a12581",
+              "name": "Chart entries.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "chart",
+                    ":kind",
+                    ":type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "kind",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "type",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "acff84ab-044a-4ac1-838b-49c6b562c704",
+          "name": "Get Chart By Genre",
+          "request": {
+            "name": "Get Chart By Genre",
+            "description": {
+              "content": "Retrieve a chart restricted to a genre such as `hip-hop-rap` or `afrobeats`.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":genre",
+                "chart",
+                ":kind",
+                ":type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "genre",
+                  "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "kind",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "type",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d0a2a07-c0d0-4a11-b6b2-d8a160e33673",
+              "name": "Chart entries.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":genre",
+                    "chart",
+                    ":kind",
+                    ":type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "genre",
+                      "description": "(Required) Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "kind",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "type",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "bd25d20b-22ff-44bc-912d-4da20592fb93",
+      "name": "Search",
+      "description": {
+        "content": "Free-text search and autosuggest across music, albums, and artists.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b443f08e-6b2f-4ba0-bc59-e6865ab92575",
+          "name": "Search Audiomack",
+          "request": {
+            "name": "Search Audiomack",
+            "description": {
+              "content": "Search across music, albums, and artists with optional genre and verified filters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "show",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "genre",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "verified",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "54f1d156-bf87-48ec-9b63-1d29b5f3a5bf",
+              "name": "Search results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "genre",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "verified",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8b45741b-6280-4d6b-9491-a4ac3edbb8d2",
+          "name": "Autosuggest Search",
+          "request": {
+            "name": "Autosuggest Search",
+            "description": {},
+            "url": {
+              "path": [
+                "search_autosuggest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bc3d0fff-b835-4bcc-b3ca-7a46fdd80a96",
+              "name": "Autosuggest results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search_autosuggest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "cad9eaf6-a8b2-4a61-a315-fc295a5586b4",
+      "name": "Stats",
+      "description": {
+        "content": "Tokenised view and play event reporting.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "26965acb-e933-41db-979c-38dfbbf3b7a5",
+          "name": "Get Stats Token",
+          "request": {
+            "name": "Get Stats Token",
+            "description": {
+              "content": "Request a one-shot token used to authorise a subsequent stats event.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                "stats",
+                "token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "device",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "music_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c33435a-3418-4a3e-8ff9-7d4373ccf302",
+              "name": "Stats token issued.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    "stats",
+                    "token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "device",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "music_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9eb57fb-495b-4fe6-b7c5-ecff7880b7b6",
+          "name": "Record Stats Event",
+          "request": {
+            "name": "Record Stats Event",
+            "description": {
+              "content": "Record a view or play event using a previously issued stats token.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "music",
+                "stats",
+                ":music_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "music_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "token",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "849d3ec6-6465-4df2-bd1d-de0281194330",
+              "name": "Event recorded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "music",
+                    "stats",
+                    ":music_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "music_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "dab50f12-e8a1-4a53-9d4f-05aacbbbaa94",
+      "name": "User",
+      "description": {
+        "content": "Authenticated user profile, feed, uploads, playlists, and notifications.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "671e44ae-adee-454b-b67b-af63a6919646",
+          "name": "Get Authenticated User",
+          "request": {
+            "name": "Get Authenticated User",
+            "description": {},
+            "url": {
+              "path": [
+                "user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a4eef95f-c33c-460e-825c-2abcc809a075",
+              "name": "Current user.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af2ef5d3-ff76-4724-b9b2-88fc3cddf4d1",
+          "name": "Register User",
+          "request": {
+            "name": "Register User",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "register"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<email>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "artist_name",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "password",
+                  "value": "<password>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "password2",
+                  "value": "<password>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "583fc49e-b694-46fc-a8cb-caa6d9236c02",
+              "name": "User registered.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<email>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "artist_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "password",
+                      "value": "<password>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "password2",
+                      "value": "<password>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c6f571e0-52ca-494a-bf34-5b561d61c131",
+          "name": "Forgot Password",
+          "request": {
+            "name": "Forgot Password",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "forgot-password"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<email>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "10c27735-c6cf-4d19-b4ff-7bafd2632bff",
+              "name": "Password reset email sent.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "forgot-password"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<email>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f14d3c0-ab66-44e8-ad87-a84a7bdf0952",
+          "name": "List User Playlists",
+          "request": {
+            "name": "List User Playlists",
+            "description": {
+              "content": "List authenticated user's playlists including private ones.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "user",
+                "playlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f229b2c1-4a4a-40a4-b5d3-3f161af327d6",
+              "name": "Playlists collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "playlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3a4bf628-eed2-48cd-a9a7-a1f76debdc5c",
+          "name": "List User Favorites",
+          "request": {
+            "name": "List User Favorites",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "favorites"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a59849a6-a5ec-42b2-ad2e-b8285242d294",
+              "name": "Favorites collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "favorites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "33da6dd0-b890-475b-80ff-8e423a73fbb0",
+          "name": "Get User Feed",
+          "request": {
+            "name": "Get User Feed",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c019c4f0-2e95-4610-9a54-a897e001d4a3",
+              "name": "Activity feed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "feed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f0437652-7573-4e29-a008-de2168b36b6b",
+          "name": "List User Uploads",
+          "request": {
+            "name": "List User Uploads",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "uploads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum results to return. Pass `0` to return all results."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d8931a8b-eee8-4a38-be5d-cc3b83d7c47d",
+              "name": "Uploads collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "uploads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d95bab1-7161-49f9-9c1a-8717f92c86f7",
+          "name": "List User Notifications",
+          "request": {
+            "name": "List User Notifications",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "native-notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "only_unseen",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "paging_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0b979f41-bb23-4076-94e0-c704d275fac0",
+              "name": "Notifications collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "native-notifications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "only_unseen",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "paging_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17b070a0-3436-4f00-a3e4-3cc50411c6e4",
+          "name": "Mark Notifications Seen",
+          "request": {
+            "name": "Mark Notifications Seen",
+            "description": {},
+            "url": {
+              "path": [
+                "user",
+                "native-notifications",
+                "seen"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "for_all",
+                  "value": "<boolean>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "61dc04b5-b4a6-471a-9898-e0b8044c5278",
+              "name": "Notifications updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "native-notifications",
+                    "seen"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "for_all",
+                      "value": "<boolean>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "ffc85c9b-0172-4186-8f48-1f611fbb555d",
+      "name": "OAuth",
+      "description": {
+        "content": "OAuth 1.0a request-token and access-token exchanges.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d512c3f3-0170-484c-bb7e-7939c95fdb5c",
+          "name": "Obtain Request Token",
+          "request": {
+            "name": "Obtain Request Token",
+            "description": {
+              "content": "Issue an unauthorised OAuth 1.0a request token. Supply an `oauth_callback` parameter. Request tokens are valid for one hour.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "request_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "51399587-388e-4bfb-8372-900377471835",
+              "name": "Request token issued.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "request_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6db8b74f-ac32-4322-bdb5-11f650ddc68e",
+          "name": "Exchange Access Token",
+          "request": {
+            "name": "Exchange Access Token",
+            "description": {
+              "content": "Exchange an authorised OAuth request token for a long-lived access token. Access tokens expire one year after issuance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "access_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a26c2b65-918a-4519-a51e-c0e41ed760f5",
+              "name": "Access token issued.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "access_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.audiomack.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth1",
+    "oauth1": [
+      {
+        "key": "consumerSecret",
+        "value": "{{consumerSecret}}"
+      },
+      {
+        "key": "consumerKey",
+        "value": "{{consumerKey}}"
+      },
+      {
+        "key": "addParamsToHeader",
+        "value": true
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a0ad0f08-deac-4cc2-a2d3-775b68a111e8",
+    "name": "Audiomack Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Audiomack Data API provides programmatic access to Audiomack's music streaming catalog, artists, playlists, charts, search, and authenticated user resources. All requests use HTTPS against https://api.audiomack.com/v1 and authenticated requests are signed with OAuth 1.0a. Response payloads are JSON and most list endpoints support page-based pagination, the `fields` parameter for sparse fieldsets, and a `limit` parameter.\n\nContact Support:\n Name: Audiomack Business",
+      "type": "text/plain"
+    }
+  }
+}
