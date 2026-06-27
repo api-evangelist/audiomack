@@ -113,7 +113,7 @@ common:
   - type: Product
     url: https://audiomack.studio
     name: Audiomack Studios
-  - type: SignUp
+  - type: Signup
     url: https://audiomack.com/login
   - type: Twitter
     url: https://twitter.com/audiomack
