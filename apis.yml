@@ -75,6 +75,12 @@ apis:
       valid for one year. List endpoints support page-based pagination, the
       `fields` parameter for sparse fieldsets, and a configurable `limit`.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/audiomack-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/audiomack-domain-security.yml
+  - type: Authentication
+    url: authentication/audiomack-authentication.yml
   - type: Website
     url: https://audiomack.com
   - type: Portal

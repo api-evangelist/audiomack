@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/audiomack-data-api-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: oauth1
+  type: http
+  scheme: OAuth
+  description: OAuth 1.0a signed request. Obtain a request token via `POST /v1/request_token`,
+    redirect the user to `https://audiomack.com/oauth/authenticate?oauth_token=...`, then exchange
+    for an access token via `POST /v1/access_token`. Access tokens are valid for one year.
+  sources:
+  - openapi/audiomack-data-api-openapi.yml
