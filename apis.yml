@@ -75,6 +75,8 @@ apis:
       valid for one year. List endpoints support page-based pagination, the
       `fields` parameter for sparse fieldsets, and a configurable `limit`.
 common:
+  - type: AgenticAccess
+    url: agentic-access/audiomack-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/audiomack-vulnerability-disclosure.yml
   - type: DomainSecurity
