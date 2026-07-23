@@ -1,0 +1,114 @@
+openapi: 3.0.3
+info:
+  title: Audiomack Data Artist Chart API
+  version: '1.0'
+  description: The Audiomack Data API provides programmatic access to Audiomack's music streaming catalog, artists, playlists, charts, search, and authenticated user resources. All requests use HTTPS against https://api.audiomack.com/v1 and authenticated requests are signed with OAuth 1.0a. Response payloads are JSON and most list endpoints support page-based pagination, the `fields` parameter for sparse fieldsets, and a `limit` parameter.
+  contact:
+    name: Audiomack Business
+    url: https://creators.audiomack.com/contact-us
+  license:
+    name: Audiomack Terms of Service
+    url: https://audiomack.com/about/terms-of-service
+servers:
+- url: https://api.audiomack.com/v1
+  description: Production
+security:
+- oauth1: []
+tags:
+- name: Chart
+  description: Aggregate song, album, and playlist charts across timeframes and genres.
+paths:
+  /chart/{kind}/{type}:
+    get:
+      tags:
+      - Chart
+      summary: Get Chart
+      description: Retrieve songs, albums, or playlists chart for a given timeframe (total, daily, weekly, monthly, yearly).
+      operationId: getChart
+      parameters:
+      - in: path
+        name: kind
+        required: true
+        schema:
+          type: string
+          enum:
+          - songs
+          - albums
+          - playlists
+      - in: path
+        name: type
+        required: true
+        schema:
+          type: string
+          enum:
+          - total
+          - daily
+          - weekly
+          - monthly
+          - yearly
+      - $ref: '#/components/parameters/Fields'
+      - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Chart entries.
+  /{genre}/chart/{kind}/{type}:
+    get:
+      tags:
+      - Chart
+      summary: Get Chart By Genre
+      description: Retrieve a chart restricted to a genre such as `hip-hop-rap` or `afrobeats`.
+      operationId: getChartByGenre
+      parameters:
+      - $ref: '#/components/parameters/Genre'
+      - in: path
+        name: kind
+        required: true
+        schema:
+          type: string
+          enum:
+          - songs
+          - albums
+          - playlists
+      - in: path
+        name: type
+        required: true
+        schema:
+          type: string
+          enum:
+          - total
+          - daily
+          - weekly
+          - monthly
+          - yearly
+      - $ref: '#/components/parameters/Fields'
+      - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Chart entries.
+components:
+  parameters:
+    Genre:
+      in: path
+      name: genre
+      required: true
+      schema:
+        type: string
+      description: Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`).
+    Fields:
+      in: query
+      name: fields
+      schema:
+        type: string
+      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
+    Limit:
+      in: query
+      name: limit
+      schema:
+        type: integer
+        default: 20
+      description: Maximum results to return. Pass `0` to return all results.
+  securitySchemes:
+    oauth1:
+      type: http
+      scheme: OAuth
+      description: OAuth 1.0a signed request. Obtain a request token via `POST /v1/request_token`, redirect the user to `https://audiomack.com/oauth/authenticate?oauth_token=...`, then exchange for an access token via `POST /v1/access_token`. Access tokens are valid for one year.
