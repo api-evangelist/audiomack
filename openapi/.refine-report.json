@@ -1,0 +1,28 @@
+{
+  "provider": "audiomack",
+  "sources": [
+    "audiomack-artist-api-openapi.yml",
+    "audiomack-chart-api-openapi.yml",
+    "audiomack-music-api-openapi.yml",
+    "audiomack-oauth-api-openapi.yml",
+    "audiomack-playlist-api-openapi.yml",
+    "audiomack-search-api-openapi.yml",
+    "audiomack-stats-api-openapi.yml",
+    "audiomack-user-api-openapi.yml"
+  ],
+  "outputs": [
+    "audiomack-artist-api-openapi.yml",
+    "audiomack-chart-api-openapi.yml",
+    "audiomack-music-api-openapi.yml",
+    "audiomack-oauth-api-openapi.yml",
+    "audiomack-playlist-api-openapi.yml",
+    "audiomack-search-api-openapi.yml",
+    "audiomack-stats-api-openapi.yml",
+    "audiomack-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
