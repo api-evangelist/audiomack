@@ -1,0 +1,185 @@
+{
+  "item": [
+    {
+      "id": "cc5688b7-8867-4967-9727-71c277206a8c",
+      "name": "OAuth",
+      "description": {
+        "content": "OAuth 1.0a request-token and access-token exchanges.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e05ea0c9-04fe-4cd4-8a14-79e4869f0e3e",
+          "name": "Obtain Request Token",
+          "request": {
+            "name": "Obtain Request Token",
+            "description": {
+              "content": "Issue an unauthorised OAuth 1.0a request token. Supply an `oauth_callback` parameter. Request tokens are valid for one hour.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "request_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5e4977a-0f80-4dee-9b74-842af9326b92",
+              "name": "Request token issued.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "request_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8af640b8-ebb8-453a-b468-28fafb07924d",
+          "name": "Exchange Access Token",
+          "request": {
+            "name": "Exchange Access Token",
+            "description": {
+              "content": "Exchange an authorised OAuth request token for a long-lived access token. Access tokens expire one year after issuance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "access_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "509b664a-9829-4e5a-bac9-d0655fe87cba",
+              "name": "Access token issued.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "access_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth1",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "OAuth <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.audiomack.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth1",
+    "oauth1": [
+      {
+        "key": "consumerSecret",
+        "value": "{{consumerSecret}}"
+      },
+      {
+        "key": "consumerKey",
+        "value": "{{consumerKey}}"
+      },
+      {
+        "key": "addParamsToHeader",
+        "value": true
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "38105fc8-857e-4d90-81b9-87824050bc1f",
+    "name": "Audiomack Data Artist OAuth API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Audiomack Data API provides programmatic access to Audiomack's music streaming catalog, artists, playlists, charts, search, and authenticated user resources. All requests use HTTPS against https://api.audiomack.com/v1 and authenticated requests are signed with OAuth 1.0a. Response payloads are JSON and most list endpoints support page-based pagination, the `fields` parameter for sparse fieldsets, and a `limit` parameter.\n\nContact Support:\n Name: Audiomack Business",
+      "type": "text/plain"
+    }
+  }
+}

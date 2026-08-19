@@ -1,0 +1,389 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Artist",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Artist",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Retrieve artist profile and aggregate statistics."
+        },
+        {
+          "info": {
+            "name": "List Artist Uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/uploads",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Artist Uploads"
+        },
+        {
+          "info": {
+            "name": "List Artist Favorites",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/favorites",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "show",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Artist Favorites"
+        },
+        {
+          "info": {
+            "name": "Search Artist Favorites",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/favorites/search",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search Artist Favorites"
+        },
+        {
+          "info": {
+            "name": "List Artist Playlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/playlists",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "genre",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Artist Playlists"
+        },
+        {
+          "info": {
+            "name": "Follow Artist",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/artist/:slug/follow",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Follow Artist"
+        },
+        {
+          "info": {
+            "name": "Unfollow Artist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/artist/:slug/follow",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Unfollow Artist"
+        },
+        {
+          "info": {
+            "name": "List Artist Following",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/following",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Artist Following"
+        },
+        {
+          "info": {
+            "name": "List Artist Followers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/follows",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Artist Followers"
+        },
+        {
+          "info": {
+            "name": "Get Artist Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/feed",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "Get Artist Feed"
+        },
+        {
+          "info": {
+            "name": "Get Artist Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:id/metrics",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve artist-level metrics plus top 10 tracks metrics."
+        },
+        {
+          "info": {
+            "name": "Get Artist Pinned",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/artist/:slug/pinned",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Get Artist Pinned"
+        },
+        {
+          "info": {
+            "name": "Add Artist Pinned",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/artist/:slug/pinned",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Add Artist Pinned"
+        },
+        {
+          "info": {
+            "name": "Update Artist Pinned",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/artist/:slug/pinned",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Update Artist Pinned"
+        },
+        {
+          "info": {
+            "name": "Remove Artist Pinned",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/artist/:slug/pinned",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ]
+          },
+          "docs": "Remove Artist Pinned"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

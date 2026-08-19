@@ -1,0 +1,229 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist User API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "User",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Authenticated User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user"
+          },
+          "docs": "Get Authenticated User"
+        },
+        {
+          "info": {
+            "name": "Register User",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/user/register",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "email",
+                  "value": ""
+                },
+                {
+                  "name": "artist_name",
+                  "value": ""
+                },
+                {
+                  "name": "password",
+                  "value": ""
+                },
+                {
+                  "name": "password2",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Register User"
+        },
+        {
+          "info": {
+            "name": "Forgot Password",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/user/forgot-password",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Forgot Password"
+        },
+        {
+          "info": {
+            "name": "List User Playlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user/playlists",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List authenticated user's playlists including private ones."
+        },
+        {
+          "info": {
+            "name": "List User Favorites",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user/favorites",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List User Favorites"
+        },
+        {
+          "info": {
+            "name": "Get User Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user/feed",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "Get User Feed"
+        },
+        {
+          "info": {
+            "name": "List User Uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user/uploads",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List User Uploads"
+        },
+        {
+          "info": {
+            "name": "List User Notifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/user/native-notifications",
+            "params": [
+              {
+                "name": "only_unseen",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "paging_token",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List User Notifications"
+        },
+        {
+          "info": {
+            "name": "Mark Notifications Seen",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/user/native-notifications/seen",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "for_all",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Mark Notifications Seen"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

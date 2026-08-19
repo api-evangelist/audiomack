@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist Chart API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Chart",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/chart/:kind/:type",
+            "params": [
+              {
+                "name": "kind",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "Retrieve songs, albums, or playlists chart for a given timeframe (total, daily, weekly, monthly, yearly)."
+        },
+        {
+          "info": {
+            "name": "Get Chart By Genre",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/:genre/chart/:kind/:type",
+            "params": [
+              {
+                "name": "genre",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+              },
+              {
+                "name": "kind",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "Retrieve a chart restricted to a genre such as `hip-hop-rap` or `afrobeats`."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

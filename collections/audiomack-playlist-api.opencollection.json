@@ -1,0 +1,311 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist Playlist API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Playlist",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Trending Playlists By Genre",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/playlist/:genre/trending",
+            "params": [
+              {
+                "name": "genre",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List Trending Playlists By Genre"
+        },
+        {
+          "info": {
+            "name": "Create Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/playlist",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "title",
+                  "value": ""
+                },
+                {
+                  "name": "genre",
+                  "value": ""
+                },
+                {
+                  "name": "private",
+                  "value": ""
+                },
+                {
+                  "name": "music_id",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Create Playlist"
+        },
+        {
+          "info": {
+            "name": "Get Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/playlist/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              }
+            ]
+          },
+          "docs": "Get Playlist"
+        },
+        {
+          "info": {
+            "name": "Update Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/playlist/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "title",
+                  "value": ""
+                },
+                {
+                  "name": "genre",
+                  "value": ""
+                },
+                {
+                  "name": "music_id",
+                  "value": ""
+                },
+                {
+                  "name": "private",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update Playlist"
+        },
+        {
+          "info": {
+            "name": "Delete Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/playlist/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ]
+          },
+          "docs": "Delete Playlist"
+        },
+        {
+          "info": {
+            "name": "Add Track To Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/playlist/:id/track",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "music_id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Add Track To Playlist"
+        },
+        {
+          "info": {
+            "name": "Remove Track From Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/playlist/:id/:music_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              },
+              {
+                "name": "music_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove Track From Playlist"
+        },
+        {
+          "info": {
+            "name": "Get Playlist By Slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/playlist/:artistSlug/:playlistSlug",
+            "params": [
+              {
+                "name": "artistSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "playlistSlug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              }
+            ]
+          },
+          "docs": "Get Playlist By Slug"
+        },
+        {
+          "info": {
+            "name": "Favorite Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/playlist/:id/favorite",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ]
+          },
+          "docs": "Favorite Playlist"
+        },
+        {
+          "info": {
+            "name": "Unfavorite Playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/playlist/:id/favorite",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ]
+          },
+          "docs": "Unfavorite Playlist"
+        },
+        {
+          "info": {
+            "name": "Get Playlist Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/playlist/:id/metrics",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack playlist identifier."
+              }
+            ]
+          },
+          "docs": "Get Playlist Metrics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

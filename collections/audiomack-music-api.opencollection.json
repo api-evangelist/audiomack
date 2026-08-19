@@ -1,0 +1,404 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist Music API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Music",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Music By Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "Optional consumer key for unauthenticated read access."
+              }
+            ]
+          },
+          "docs": "Retrieve song or album metadata by Audiomack music ID."
+        },
+        {
+          "info": {
+            "name": "Get Music By Slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/:type/:artist/:slug",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "Optional consumer key for unauthenticated read access."
+              }
+            ]
+          },
+          "docs": "Retrieve a song or album by artist slug and music slug."
+        },
+        {
+          "info": {
+            "name": "Flag Music Unplayable",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.audiomack.com/v1/music/:type/:artist/:slug",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "Artist slug (e.g. `drake`)."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "status",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Report a song or album as unplayable."
+        },
+        {
+          "info": {
+            "name": "Get Music Preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/preview/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Fetch the preview audio resource for a given music ID."
+        },
+        {
+          "info": {
+            "name": "List Recent Music",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/recent",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List most recently uploaded music."
+        },
+        {
+          "info": {
+            "name": "List Recent Music By Genre",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/:genre/recent",
+            "params": [
+              {
+                "name": "genre",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List most recently uploaded music for a specific genre (e.g. `hip-hop-rap`, `afrobeats`)."
+        },
+        {
+          "info": {
+            "name": "List Trending Music",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/trending",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List trending music across all genres."
+        },
+        {
+          "info": {
+            "name": "List Trending Music By Genre",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/:genre/trending",
+            "params": [
+              {
+                "name": "genre",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`)."
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum results to return. Pass `0` to return all results."
+              }
+            ]
+          },
+          "docs": "List trending music for a specific genre."
+        },
+        {
+          "info": {
+            "name": "Get Music Stream Url",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/music/:id/play",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "session",
+                  "value": ""
+                },
+                {
+                  "name": "album_id",
+                  "value": ""
+                },
+                {
+                  "name": "playlist_id",
+                  "value": ""
+                },
+                {
+                  "name": "hq",
+                  "value": ""
+                },
+                {
+                  "name": "key",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Request a streaming URL for a music resource. The returned URL is valid for approximately 10 seconds."
+        },
+        {
+          "info": {
+            "name": "Record Music Ad Event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/music/:id/ads",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "status",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Track an advertisement event for a music resource."
+        },
+        {
+          "info": {
+            "name": "Favorite Music",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/music/:id/favorite",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Favorite Music"
+        },
+        {
+          "info": {
+            "name": "Unfavorite Music",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/music/:id/favorite",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Unfavorite Music"
+        },
+        {
+          "info": {
+            "name": "Repost Music",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.audiomack.com/v1/music/:id/repost",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Repost Music"
+        },
+        {
+          "info": {
+            "name": "Remove Music Repost",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.audiomack.com/v1/music/:id/repost",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Remove Music Repost"
+        },
+        {
+          "info": {
+            "name": "Get Music Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/:id/metrics",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Audiomack music identifier."
+              }
+            ]
+          },
+          "docs": "Retrieve play and engagement metrics for a music resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

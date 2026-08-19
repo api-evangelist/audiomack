@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist OAuth API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OAuth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain Request Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/request_token"
+          },
+          "docs": "Issue an unauthorised OAuth 1.0a request token. Supply an `oauth_callback` parameter. Request tokens are valid for one hour."
+        },
+        {
+          "info": {
+            "name": "Exchange Access Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/access_token"
+          },
+          "docs": "Exchange an authorised OAuth request token for a long-lived access token. Access tokens expire one year after issuance."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

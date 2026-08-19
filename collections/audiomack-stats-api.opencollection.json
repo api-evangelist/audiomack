@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Audiomack Data Artist Stats API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Stats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Stats Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.audiomack.com/v1/music/stats/token",
+            "params": [
+              {
+                "name": "device",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "music_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Request a one-shot token used to authorise a subsequent stats event."
+        },
+        {
+          "info": {
+            "name": "Record Stats Event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.audiomack.com/v1/music/stats/:music_id",
+            "params": [
+              {
+                "name": "music_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "token",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Record a view or play event using a previously issued stats token."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
