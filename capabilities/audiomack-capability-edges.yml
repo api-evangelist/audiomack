@@ -1,0 +1,27 @@
+slug: audiomack
+provider: Audiomack
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Media, Entertainment & Telecom Content
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: User
+  spec_file: audiomack-user-api-openapi.yml
+  capability_id: BC-3750.10
+  capability_id_l1: BC-3750
+  capability_name: Viewer Identity Management
+  confidence: 0.7
+  evidence: POST /user/register  registerUser  Register User; GET /user  getUser  Get Authenticated User;
+    GET /user/favorites  List User Favorites
+  reason: Operations provision and read listener accounts (register, forgot-password, authenticated user,
+    their playlists/favorites/feed) on an on-demand music streaming service, which is viewer/listener
+    account stewardship rather than generic IAM. Some ambiguity as it also carries engagement surfaces
+    (feed, notifications), so confidence is moderate.

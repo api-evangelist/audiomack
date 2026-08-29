@@ -199,6 +199,9 @@ apis:
   - type: Authentication
     url: https://www.audiomack.com/data-api/docs
 common:
+  - type: CapabilityMap
+    url: capabilities/audiomack-capability-edges.yml
+    name: Audiomack Business Capability Map
   - type: AgenticAccess
     url: agentic-access/audiomack-agentic-access.yml
   - type: VulnerabilityDisclosure
