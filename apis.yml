@@ -72,7 +72,7 @@ apis:
   humanURL: https://www.audiomack.com/data-api/docs
   baseURL: https://api.audiomack.com/v1
   tags:
-  - Artist
+  - Artists
   tags_raw:
   - Artist
   properties:
