@@ -117,24 +117,6 @@ apis:
     url: https://github.com/audiomack/audiomack-api-examples
   - type: Authentication
     url: https://www.audiomack.com/data-api/docs
-- aid: audiomack:audiomack-oauth-api
-  name: Audiomack OAuth API
-  description: OAuth 1.0a request-token and access-token exchanges.
-  humanURL: https://www.audiomack.com/data-api/docs
-  baseURL: https://api.audiomack.com/v1
-  tags:
-  - Authentication
-  tags_raw:
-  - OAuth
-  properties:
-  - type: OpenAPI
-    url: openapi/audiomack-oauth-api-openapi.yml
-  - type: Documentation
-    url: https://www.audiomack.com/data-api/docs
-  - type: CodeExamples
-    url: https://github.com/audiomack/audiomack-api-examples
-  - type: Authentication
-    url: https://www.audiomack.com/data-api/docs
 - aid: audiomack:audiomack-playlist-api
   name: Audiomack Playlist API
   description: Playlist creation, editing, favoriting, and discovery.
@@ -193,6 +175,22 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/audiomack-user-api-openapi.yml
+  - type: Documentation
+    url: https://www.audiomack.com/data-api/docs
+  - type: CodeExamples
+    url: https://github.com/audiomack/audiomack-api-examples
+  - type: Authentication
+    url: https://www.audiomack.com/data-api/docs
+- aid: audiomack:audiomack-oauth-api
+  name: Audiomack O Auth API
+  description: OAuth 1.0a request-token and access-token exchanges.
+  humanURL: https://www.audiomack.com/data-api/docs
+  baseURL: https://api.audiomack.com/v1
+  tags:
+  - OAuth
+  properties:
+  - type: OpenAPI
+    url: openapi/audiomack-oauth-api-openapi.yml
   - type: Documentation
     url: https://www.audiomack.com/data-api/docs
   - type: CodeExamples
