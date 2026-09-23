@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: Audiomack Data Artist API
   version: '1.0'
@@ -212,12 +212,6 @@ paths:
           description: Pinned items removed.
 components:
   parameters:
-    Fields:
-      in: query
-      name: fields
-      schema:
-        type: string
-      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
     ArtistSlug:
       in: path
       name: slug
@@ -232,6 +226,12 @@ components:
         type: integer
         default: 20
       description: Maximum results to return. Pass `0` to return all results.
+    Fields:
+      in: query
+      name: fields
+      schema:
+        type: string
+      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
   securitySchemes:
     oauth1:
       type: http

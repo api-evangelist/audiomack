@@ -1,14 +1,7 @@
 {
   "provider": "audiomack",
   "sources": [
-    "audiomack-artist-api-openapi.yml",
-    "audiomack-chart-api-openapi.yml",
-    "audiomack-music-api-openapi.yml",
-    "audiomack-oauth-api-openapi.yml",
-    "audiomack-playlist-api-openapi.yml",
-    "audiomack-search-api-openapi.yml",
-    "audiomack-stats-api-openapi.yml",
-    "audiomack-user-api-openapi.yml"
+    "_original/audiomack-data-api-openapi.yml"
   ],
   "outputs": [
     "audiomack-artist-api-openapi.yml",
@@ -20,9 +13,25 @@
     "audiomack-stats-api-openapi.yml",
     "audiomack-user-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "audiomack-data-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "superseded outputs removed: audiomack-o-auth-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 8 total)"
+  ],
+  "skipped": [
+    "audiomack-artist-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-chart-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-music-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-o-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-playlist-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-stats-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "audiomack-user-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
