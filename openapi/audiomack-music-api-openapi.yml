@@ -261,25 +261,6 @@ paths:
           description: Metrics response.
 components:
   parameters:
-    Key:
-      in: query
-      name: key
-      schema:
-        type: string
-      description: Optional consumer key for unauthenticated read access.
-    Fields:
-      in: query
-      name: fields
-      schema:
-        type: string
-      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
-    Genre:
-      in: path
-      name: genre
-      required: true
-      schema:
-        type: string
-      description: Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`).
     ArtistSlug:
       in: path
       name: slug
@@ -294,6 +275,18 @@ components:
       schema:
         type: string
       description: Audiomack music identifier.
+    Fields:
+      in: query
+      name: fields
+      schema:
+        type: string
+      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
+    Key:
+      in: query
+      name: key
+      schema:
+        type: string
+      description: Optional consumer key for unauthenticated read access.
     Limit:
       in: query
       name: limit
@@ -301,6 +294,13 @@ components:
         type: integer
         default: 20
       description: Maximum results to return. Pass `0` to return all results.
+    Genre:
+      in: path
+      name: genre
+      required: true
+      schema:
+        type: string
+      description: Audiomack genre slug (e.g. `hip-hop-rap`, `afrobeats`, `reggae`, `electronic`).
   securitySchemes:
     oauth1:
       type: http
