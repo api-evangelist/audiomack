@@ -168,12 +168,6 @@ paths:
           description: Notifications updated.
 components:
   parameters:
-    Fields:
-      in: query
-      name: fields
-      schema:
-        type: string
-      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
     Limit:
       in: query
       name: limit
@@ -181,6 +175,12 @@ components:
         type: integer
         default: 20
       description: Maximum results to return. Pass `0` to return all results.
+    Fields:
+      in: query
+      name: fields
+      schema:
+        type: string
+      description: Comma-separated list of fields to include (sparse fieldsets), e.g. `id,title,artist:name`.
   securitySchemes:
     oauth1:
       type: http
