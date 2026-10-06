@@ -64,7 +64,7 @@ tags:
   - Creator Economy
   - Independent Artists
 created: '2026-05-25'
-modified: '2026-05-25'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: audiomack:audiomack-artist-api
@@ -200,6 +200,8 @@ apis:
   - type: Authentication
     url: https://www.audiomack.com/data-api/docs
 common:
+  - url: https://audiomack.com/blog
+    type: Blog
   - type: CapabilityMap
     url: capabilities/audiomack-capability-edges.yml
     name: Audiomack Business Capability Map
