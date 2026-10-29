@@ -1,4 +1,4 @@
-# Audiomack (audiomack)
+# Audiomack
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,98 +66,117 @@
 
 Audiomack is an on-demand music streaming and audio discovery platform that lets artists and creators upload unlimited music and podcasts and reach listeners through its iOS, Android, and web apps. The service is widely associated with hip-hop, rap, R&B, Afrobeats, dancehall, reggae, electronic, and Latin genres, and is a launchpad for independent and emerging artists worldwide, with particularly strong adoption across Africa, the Caribbean, and the U.S. Audiomack publishes a public Data API at https://api.audiomack.com/v1 that exposes the catalog (songs, albums, playlists), artist profiles and follower graph, search and autosuggest, charts by genre and timeframe, streaming URL issuance, favorites and reposts, ad and view/play stats reporting, and authenticated user resources. Authentication is OAuth 1.0a (three-legged), with an optional unauthenticated `key` parameter for read-only access on some endpoints. Audiomack also publishes a Creators portal, an Artist Guide, Audiomack Studios, and the AMP monetization program for artist payouts.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/audiomack/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/audiomack/refs/heads/main/apis.yml)
+**Areas:** Music · Music Streaming · Audio · Podcasts · Hip-Hop · Rap · Afrobeats · Reggae · Dancehall · R&B · Electronic · Charts
 
-## Scope
+## Audiomack on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** 3rd-Party
+Everything profiled for Audiomack is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/audiomack/](https://apis.io/providers/audiomack/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Music
-- Music Streaming
-- Audio
-- Podcasts
-- Hip-Hop
-- Rap
-- Afrobeats
-- Reggae
-- Dancehall
-- R&B
-- Electronic
-- Charts
-- Playlists
-- Discovery
-- Creator Economy
-- Independent Artists
+- [Audiomack Artist API](https://apis.io/apis/audiomack/audiomack-artist-api/) — Artist profiles, uploads, favorites, followers, and pinned items.
+- [Audiomack Chart API](https://apis.io/apis/audiomack/audiomack-chart-api/) — Aggregate song, album, and playlist charts across timeframes and genres.
+- [Audiomack Music API](https://apis.io/apis/audiomack/audiomack-music-api/) — Songs, albums, streaming, favorites, reposts, and metrics.
+- [Audiomack Playlist API](https://apis.io/apis/audiomack/audiomack-playlist-api/) — Playlist creation, editing, favoriting, and discovery.
+- [Audiomack Search API](https://apis.io/apis/audiomack/audiomack-search-api/) — Free-text search and autosuggest across music, albums, and artists.
+- [Audiomack Stats API](https://apis.io/apis/audiomack/audiomack-stats-api/) — Tokenised view and play event reporting.
+- [Audiomack User API](https://apis.io/apis/audiomack/audiomack-user-api/) — Authenticated user profile, feed, uploads, playlists, and notifications.
+- [Audiomack O Auth API](https://apis.io/apis/audiomack/audiomack-oauth-api/) — OAuth 1.0a request-token and access-token exchanges.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Audiomack Data API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Audiomack Data API provides programmatic access to Audiomack's music catalog and social graph: songs, albums, artists, playlists, charts by genre and timeframe (daily/weekly/monthly/yearly/total), full-text search and autosuggest, streaming URL issuance (short-lived, ~10 second TTL), favorites, reposts, follows, ad and view/play stats reporting, and the authenticated user's feed, uploads, playlists, favorites, and notifications. Requests are signed with OAuth 1.0a; access tokens are valid for one year. List endpoints support page-based pagination, the `fields` parameter for sparse fieldsets, and a configurable `limit`.
+- [Audiomack Agentic Access](https://apis.io/agentic-access/audiomack/audiomack-agentic-access/)
 
-- **Human URL:** [https://www.audiomack.com/data-api/docs](https://www.audiomack.com/data-api/docs)
-- **Base URL:** `https://api.audiomack.com/v1`
+#### Collections (9)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Music
-- Streaming
-- Catalog
-- Artists
-- Playlists
-- Charts
-- Search
-- OAuth 1.0a
+- [Audiomack Data Artist API](https://apis.io/collections/audiomack/open-audiomack-artist-api/)
+- [Audiomack Data Artist Chart API](https://apis.io/collections/audiomack/open-audiomack-chart-api/)
+- [Audiomack Data API](https://apis.io/collections/audiomack/open-audiomack-data-api/)
+- [Audiomack Data Artist Music API](https://apis.io/collections/audiomack/open-audiomack-music-api/)
+- [Audiomack Data Artist OAuth API](https://apis.io/collections/audiomack/open-audiomack-oauth-api/)
+- [Audiomack Data Artist Playlist API](https://apis.io/collections/audiomack/open-audiomack-playlist-api/)
+- [Audiomack Data Artist Search API](https://apis.io/collections/audiomack/open-audiomack-search-api/)
+- [Audiomack Data Artist Stats API](https://apis.io/collections/audiomack/open-audiomack-stats-api/)
+- [Audiomack Data Artist User API](https://apis.io/collections/audiomack/open-audiomack-user-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://www.audiomack.com/data-api/docs)
-- [OpenAPI](openapi/audiomack-data-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/audiomack-data-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/audiomack-data-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Code Examples](https://github.com/audiomack/audiomack-api-examples)
-- [Authentication](https://www.audiomack.com/data-api/docs)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Audiomack Authentication](https://apis.io/security/audiomack/audiomack-authentication/)
+- [Audiomack Domain Security](https://apis.io/security/audiomack/audiomack-domain-security/)
+- [Audiomack Vulnerability Disclosure](https://apis.io/security/audiomack/audiomack-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://audiomack.com)
-- [Portal](https://creators.audiomack.com)
 - [Documentation](https://www.audiomack.com/data-api/docs)
-- [Getting Started](https://www.audiomack.com/data-api/docs)
-- [Code Examples](https://github.com/audiomack/audiomack-api-examples)
-- [GitHub Organization](https://github.com/audiomack)
+- [Getting started](https://www.audiomack.com/data-api/docs)
 - [Support](https://audiomack.zendesk.com/)
-- [Contact](https://creators.audiomack.com/contact-us)
-- [Documentation](https://creators.audiomack.com/about/legal)
-- [Terms of Service](https://audiomack.com/about/terms-of-service)
-- [Privacy Policy](https://audiomack.com/about/privacy-policy)
-- [Responsible Disclosure](https://creators.audiomack.com/responsible-disclosure)
-- [Documentation](https://guide.audiomack.com)
-- [Documentation](https://styleguide.audiomack.com)
-- [Product](https://audiomack.studio)
-- [Sign Up](https://audiomack.com/login)
-- [Twitter](https://twitter.com/audiomack)
-- [LinkedIn](https://www.linkedin.com/company/audiomack)
-- [Facebook](https://www.facebook.com/audiomack)
-- [Instagram](https://www.instagram.com/audiomack)
-- [YouTube](https://www.youtube.com/audiomack)
-- [Tik Tok](https://www.tiktok.com/@audiomack)
-- [Twitch](https://www.twitch.tv/audiomack)
-- [Apps](https://apps.apple.com/us/app/audiomack-music-downloader/id669528610)
-- [Apps](https://play.google.com/store/apps/details?id=com.audiomack)
-- [Features](undefined)
+- [Blog](https://audiomack.com/blog)
+- [Terms of service](https://audiomack.com/about/terms-of-service)
+- [Privacy policy](https://audiomack.com/about/privacy-policy)
+- [GitHub](https://github.com/audiomack)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 50.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 13.2 |
+
+**Agent readiness 18.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/audiomack/](https://apis.io/providers/audiomack/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Audiomack: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/audiomack/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
